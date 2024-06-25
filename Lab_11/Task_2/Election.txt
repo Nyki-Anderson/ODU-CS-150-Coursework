@@ -1,0 +1,2 @@
+Task 2:
+Write an algorithm and a C++ program that allows the user to enter the last names of five candidates in a local election and the number of votes received by each candidate. The program should then use dynamic arrays to hold the data and output each candidate’s name, the number of votes received, and the percentage of the total votes received by the candidate. Your program should also output the winner of the election.

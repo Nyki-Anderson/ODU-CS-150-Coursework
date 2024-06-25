@@ -1,0 +1,36 @@
+Task 1: Define a struct computerType to store the following data about a computer:
+  - Manufacturer
+  - Model type
+  - Processor type
+  - RAM (in GB)
+  - Hard drive size (in GB)
+  - Year built
+  - Price
+Write a program that declares a variable of type computerType, prompts the user to input data about a computer, and outputs the computer's data.
+
+Algorithm:
+  Include all headers and namespaces
+    - <iostream>
+    - <iomanip>
+    - <string>
+  Define computerType struct
+    - string manufacturer
+    - string model
+    - string processor
+    - int RAM
+    - int sizeHardDrive
+    - int yearBuilt
+    - double price
+  Declare function prototypes
+    - void inputComputerData(computerType& newComputer)
+    - void printComputerData(computerType newComputer)
+  int main()
+    - Declare variables
+      - computerType newComputer
+    - Call inputComputerData(computerType& newComputer)
+    - Call printComputerData(computerType newComputer)
+  void inputComputerData(computerType& newComputer)
+    - Request user input for each member of the computerType
+    - Store user input for each member of the computerType
+    void printComputerData(computerType newComputer)
+    - Print each member of the newComputer struct variable

@@ -1,0 +1,15 @@
+Objective: You work in a printing office where the machine can print documents in different colors. It gets an integer number between 1 to 7 and prints the documents in rainbow colors.
+
+Design an algorithm and C++ program that does the following:
+  - prompt user to enter a number between 1 and 7
+  - use selection structure such as if-else or switch to find the color based on the previous table
+  - output the color related to input number
+  - save the output in a file named color.txt
+
+Algorithm:
+- Declare variables
+  - inputColor
+- Declare and associate ofstream with outFile and output.txt
+- Prompt user to input color
+- Print color selection to terminal
+- Print table of color choices and selection to output.txt

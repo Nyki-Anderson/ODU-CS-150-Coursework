@@ -1,0 +1,11 @@
+Task: Write an algorithm and a C++ program that uses a loop structure to add and print all the numbers divisible by 7, between 1 and 100.
+
+Algorithm:
+- Declare variables
+  - i (int)
+  - sum (int)
+- Use for loop to iterate over 1-100 
+  - Use if (i % 7 == 0)
+    - print i
+    - add i to sum
+- Print sum

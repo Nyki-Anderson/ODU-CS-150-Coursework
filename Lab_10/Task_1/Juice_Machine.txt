@@ -1,0 +1,89 @@
+Task 1: A common place to buy juice is from a machine. A new juice machine has been purchased for the gym, but it is not working properly. The machine sells the following types of juice:
+  - Orange
+  - Apple
+  - Mango
+  - Strawberry-Banana
+You have been asked to write a C++ program for this juice machine so that it can be put into operation. (Create two classes for this task) The program should do the following:
+  1. Show the customer the different products sold by the juice machine.
+  2. Let the customer make the selection
+  3. Show the customer the cost of the item selected
+  4. Accept money from the customer
+  5. Release the item
+
+Algorithm
+  Include all header files and namespaces
+    <iostream>
+    <iomanip>
+    <string>
+
+  Define JuiceClass
+    public:
+      - string orange
+      - string apple
+      - string mango
+      - string strawberryBanana
+      - int costOrange
+      - int costApple
+      - int costMango
+      - int costStrawberryBanana
+      - JuiceClass()
+
+  Define SelectionClass
+    public:
+      - SelectionClass(int selection)
+      - int get_remaining_cost()
+    private:
+      - int juiceSelection
+      - int remainingCost
+
+  Declare function prototypes
+    - void print_menu(const JuiceClass& juiceMachine)
+    - void customer_selection(int& selection)
+    - void payment(SelectionClass& transaction)
+    - void dispense()
+
+  int main()
+    - Declare variables
+      - JuiceClass juiceMachine
+      - SelectionClass transaction
+      - int selection
+    - Call constructor for JuiceClass
+    - Use while function to loop until customer exits (selection != 9)
+      - Call print_menu(const JuiceClass& juiceMachine)
+      - Call customer_selection(const JuiceClass& juiceMachine, SelectionClass& transaction)
+      - Call payment()
+      - Call dispense()
+
+  JuiceClass::JuiceClass()
+    - orange = "orange"
+    - apple = "apple"
+    - mango = "mango"
+    - strawberryBanana = "strawberry-bananan"
+    - costOrange = 50
+    - costApple = 65
+    - costMango = 80
+    - costStrawberryBanana = 85
+
+  void SelectionClass::SelectionClass(int selection)
+    Set private variables juiceSelection and remainingCost
+
+  void set_remaining_cost(int payment)
+    Update remaining cost each time a deposti is made
+
+  int SelctionClass::get_remaining_cost()
+    Get private variable remainingCost
+
+  void print_menu(const JuiceClass* juiceMachine)
+    - Print all juice choices with respectie costs
+
+  void customer_selection(int& selection)  
+    Prompt user to input their juice selection and store in selection variable
+
+  void payment()
+    Use while statement to continue loop until full remaining balance has been deposited (get_remaining_cost() != 0)
+      - Display amount owed
+      - Subtract amount deposited from remainingCost using set_remaining_cost()
+
+  void dispense()
+    Display message saying items are being dispensed
+

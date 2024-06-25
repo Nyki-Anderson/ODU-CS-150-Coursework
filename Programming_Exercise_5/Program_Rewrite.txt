@@ -1,0 +1,10 @@
+Objective: Rewrite the program in Programming Exercise 6 using a while loop.
+
+Algorithm:
+- Declare variables
+  - i (int)
+  - value (int)
+- Use while statement (i < 5)
+  - Multiply value by (i + 1) and add i
+  - Increment i
+- output value

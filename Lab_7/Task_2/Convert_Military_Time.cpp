@@ -1,0 +1,298 @@
+/**
+* @program: Convert_Military_Time.cpp
+* @author: Nyki Anderson
+* @uin: 01179386
+* @lab: 28415
+* @date: February 26th, 2023
+*
+* @title: Convert 24-Hour Time to 12-Hour Time
+* @description: This program takes continuously takes user input for 24-hour time until they enter -1. Once the user inputs the time, it is converted to 12-hour time with an AM or PM designation and output to the user.
+*/
+
+/**
+ * Header File Declarations
+ * 
+ * @include iostream - input/output functions
+ * @include iomanip - input/output formatting functions
+*/
+#include <iostream> 
+#include <iomanip>
+
+/**
+ * Standard Library Declaration
+*/
+using namespace std;
+
+/**
+ * Function Prototype Declarations
+*/
+char UserInputs(int&, int&);
+bool HourValid(int);
+bool MinuteValid(int);
+int ConvertTime(int, char&);
+void OutputResults(int, int, char);
+bool ContinueMessage();
+void ErrorMessage();
+
+int main()
+{
+  // Local variable declarations
+  int military_hour, minutes, converted_hour;
+  char time_day;
+  char status = 'y';
+
+  // Do...While structure to continuously prompt user for new time until continue_program != true
+  do
+  {
+    // Prompt user to input 24-hour time, returns char value either 'y(es)', 'c(continue), or 'n(o)
+    status = UserInputs(military_hour, minutes);
+
+    // If UserInputs returns 'y' that means the time was valid and is ready to be converted/
+    if (status == 'y')
+    {
+      // Convert the 24 hour time (just for hour) and determine the Am/Pm
+      converted_hour = ConvertTime(military_hour, time_day);
+
+      // Converted 24 hour time is output with hours:mintues and time of day in 12 hour time
+      OutputResults(converted_hour, minutes, time_day);
+    }  
+
+    // If UserInput returned 'e(rror)', Output error message and ask if they wish to continue
+    else if (status == 'e')
+    {
+      ErrorMessage();
+      
+      if (ContinueMessage())
+      {
+        // If user decided to continue, clear stream and restart loop
+        cin.clear();
+        continue;
+      }
+     // If user decides not to continue, status is set to n(o) and do while loop terminates
+      else
+        status = 'n';
+    }
+    else 
+      status = 'n';
+   
+  } while (status != 'n');
+
+  cout << endl << "Good Bye!";
+
+  return 0;
+}
+
+/**
+ * @name: UserInputs
+ * @description: Checks user input for validity
+ * 
+ * @param int& military_hour - the address of military hour input
+ * @param int& minutews - the address of the military minutes input
+ * 
+ * @returns: char - y(es) if valid and e(error) if invalid
+*/
+char UserInputs(int& military_hour, int& minutes)
+{
+  // Declare local variables to grab each character of the time
+  char char1, char2, is_colon;
+
+  // Prompt user to input 24 hour time, then grab first character
+  cout << "Enter 24 hour time (format HH:MM) or enter anything else to exit." << endl;
+  cin >> char1;
+
+  // Based on first character, can find invalid military hour 
+  switch (char1)
+  {
+    // If the first character is valid for a 24-hour time, get the second and third charaters
+    case '0':
+    case '1':
+    case '2':
+      cin.get(char2);
+      cin.get(is_colon);
+      
+      // Checks third character, if formatted correctly will be ':'
+      if (is_colon == ':')
+      {
+        // get input for minutes
+        cin >> minutes;
+        
+        // clear any remaining characters
+        cin.clear();
+
+        // putback char2 and char1 (first out last in) to put the int back together then grab the int for hour
+        cin.putback(char2);
+        cin.putback(char1);
+        cin >> military_hour;
+
+        // Checks if hour is valid
+        if (HourValid(military_hour))
+        {
+          // Checks if minute is valid
+          // If hour and minute are valid, return y(es) to status
+          if (MinuteValid(minutes)) 
+              return 'y'; 
+          // Else return e(rror)
+          else 
+            return 'e';
+        }
+        // If hour invalid return e(rror)
+        else
+          return 'e';
+      }
+  }
+   // If first character is not 0,1,or 2 it is not a valid time, return e(rror)
+  return 'e';
+}
+
+/**
+ * @name: HourValid
+ * @description: Uses input from user and checks if hour is valid as int
+ * 
+ * @param int military_hour - number in hours place
+ * 
+ * @returns: bool - true if military hour is between 0 and 23 inclusive
+*/
+bool HourValid(int military_hour)
+{
+  // If military hour is in correct range of numbers return true, otherwise false
+  if ((military_hour >= 0 ) && (military_hour <= 23))
+    return true;
+  else
+    return false;
+}
+
+/**
+ * @name: MinuteValid
+ * @description: Uses input from user and checks if minute value is valid as int
+ * 
+ * @param int minutes - number in minutes place
+ * 
+ * @returns bool - true if military minute is between 0 and 59 inclusive
+*/
+bool MinuteValid(int minutes)
+{
+  // If minutes in correc range of numbers return true
+  if ((minutes >= 0) && (minutes <= 59))
+  {
+    return true;
+  }
+  else 
+    return false;
+}
+
+/**
+ * @name: ConvertTime
+ * @description: Convert military hour to 12-hour time and determines if it is AM/PM
+ * 
+ * @param int military hour - value of military hour
+ * @param char& time_day - determines if time is in AM/Pm
+ * 
+ * @return: int of military hour in 12 hour format
+*/
+int ConvertTime(int military_hour, char& time_day)
+{
+  // If military hour is 0 then, it is 12 am
+  if (military_hour == 0)
+  {
+    time_day = 'A';
+    return 12;
+  }
+  // If military hour is 12 then, it is 12 pm
+  else if (military_hour == 12)
+  {
+    time_day = 'P';
+    return military_hour;
+  }
+  // If military hour is greter than 12, it must be divided by 12 and the remainder is the 12 hour time equivalent
+  else if (military_hour > 12)
+  {
+    time_day = 'P';
+    return military_hour % 12;
+  }
+  // Otherwise, military hour is the same in 12-hour time
+  else 
+  {
+    time_day = 'A';
+    return military_hour;
+  }
+}
+
+/**
+ * @name: Output Results
+ * @description: Outputs 12 converted time in hours and minutews with am/pm selected, adds a zero to the front of number if necessary
+ * 
+ * @param int hour - hour in military time
+ * @param int minutes - minutes in standard time
+ * @param char time_day - am or pm
+ * 
+ * @returns void
+*/
+void OutputResults(int hour, int minutes, char time_day)
+{
+  cout << "Time in 12 hour format: " << endl;
+
+  // If hour is less than 10, it needs a 0 to pad it
+  if (hour < 10)
+  {
+    cout << "0" << hour << ":";
+
+    // If minutes are less than 10, it needs a 0 to pad it 
+    if (minutes < 10)
+      cout << "0" << minutes << time_day << endl;
+    // Else, minutes are the same in 12 hour time
+    else 
+      cout << minutes << time_day << endl << endl;
+  }
+  // Else, hour is the same in 12 hour time
+  else 
+  {
+    cout << hour << ":";
+
+    // Checks if mintues need the padding
+     if (minutes < 10)
+      cout << "0" << minutes << time_day << endl;
+
+    // Else no need for padding
+    else 
+      cout << minutes << time_day << endl << endl;
+  } 
+}
+
+/**
+ * @name: ContinueMessage
+ * @description: Asks user if they wish to continue after inputting a time or making an error
+ * 
+ * @param void
+ * 
+ * @returns: bool - true if user wishes to continue
+*/
+ bool ContinueMessage()
+{
+  // answer takes value of user input, if y(es) or Y(es) then the 
+  char answer;
+  cin.clear();
+
+  cout << endl << "Do you wish to continue? (y/Y, anything else exits) ";
+  cin >> answer;
+
+  // If user doent answer with y(es) or Y(es) then returns false
+  if ((answer == 'Y') || (answer == 'y'))
+    return true;
+
+  // Otherwise returns true
+  else
+    return false;
+}
+
+/**
+ * @name ErrorMessage
+ * @decription: Outputs error message 
+ * 
+ * @param void
+ * 
+ * @returns void
+*/
+void ErrorMessage()
+{ 
+  cout << "The time entered is invalid. " << endl;  
+}

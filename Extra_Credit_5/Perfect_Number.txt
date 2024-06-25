@@ -1,0 +1,34 @@
+Objective: Design an algorithm and write a C++ program that gets a number from the user and checks whether or not a number is perfect or not. If the input number is a perfect number, the program prints out "Perfect". Otherwise, the output message "Not perfect" is printed on the screen. The program asks the user to enter "Y" to enter a new number and other letters to exit.
+
+Algorithm:
+Declare header files
+  - <iostream>
+Declare function prototypes
+  - void getInput(int& number)
+  - bool checkIfPerfect(int number)
+  - void printResult(bool perfect)
+  - bool continueMessage()
+int main()
+- Declare variables
+  - int number 
+do 
+  - Call getInput(number)
+  - if number is perfect (call checkIfPerfect(number))
+    - print number is perfect
+  - else 
+    - print number is not perfect
+while (continueMessage();)
+
+bool getInput(int& number)
+- Prompt user to input positive integer and store in number
+- If number is not positive return false
+- Else return true
+
+bool checkIfPerfect(int number)
+- Declare local variables
+  -  
+
+bool continueMessage()
+- Prompts user to decide whether they wish to continue
+  - Return true if user inputs y or Y
+  - Returns false if anything else is input

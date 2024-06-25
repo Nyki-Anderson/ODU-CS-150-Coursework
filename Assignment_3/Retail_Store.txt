@@ -1,0 +1,24 @@
+Objective: You are hired to design an algorithm and write a C++ program for a reail store. Your program will do the following:
+  - Read the data about the items in the retail store from an input file named input.txt. The input file has the following information:
+    - Item description
+    - Units in inventory
+    - Price of the item
+  - Output the data about the items as shown in the example run
+  - Calculate and output the total price of all the items in the retail store
+
+Algorithm:
+- Include iostream, fstream, string, and iomanip header files.
+- Declare variables for:
+  - itemName
+  - itemInventory
+  - itemPrice
+  - retailTotal
+- Open and associate input.txt and output.txt with ifstream and ofstream variables
+- Print header and table info to output.txt
+- Read in the first value from input.txt and store it in itemName.
+- Read in the second value from input.txt and store it in itemInventory
+- Read in the third value from input.txt and store it in itemPrice
+- Print itemName, itemInventory, and itemPrice to output.txt
+- Continue this process until all items have been printed to output.txt
+- Print retailTotal at the end of output.txt
+

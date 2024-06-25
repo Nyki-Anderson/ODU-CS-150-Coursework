@@ -1,0 +1,61 @@
+/*
+Name of student source file: Correct_Synatx.cpp
+Student Name: Nyki Anderson
+Student UIN: 01179386
+Lab CRN: 28415
+Date: January 29th, 2023
+
+Project Title: Correct the Syntax
+Project Description: This program includes several syntactical and other errors. The goal is to get it in proper working order so that it correctly calculates the billing amount after discounts have been applied.
+*/
+
+// <iostream> is case-sensitive, (change: <ioStream> to <iostream>)
+#include <iostream>
+// inserted <cmath> % operator
+#include <cmath>
+
+using namespace std;
+
+// Cannot use special chars in variable name, (change: DECIMAL# to DECIMAL)
+const double DECIMAL = 5.50;
+// (change: inserted const to declare constant )
+const double PAY_RATE = 10.75;
+// inserted price as constant because it does not change (updated throughout program)
+const double PRICE = 49.99;
+// removed constant declaration blanks for simpler solution
+// const string blanks = "	";
+
+int main()
+{
+    // height and weight contain decimals, must be declared as double (change: int -> double)
+    int height, weight, hoursWorked;
+    // Cannot use % in variable name, (change: 10%discount to tenPercentDiscount and inserted ;)
+    // Cannot use $ in variable name, changed billingAmount$ to billingAmount
+    double tenPercentDiscount, billingAmount, bonus;
+
+    // declared hoursWorked with the other int variables
+    hoursWorked = 45;
+    // height is type int (change: 6.2 -> 6)
+    height = 6;
+    weight = 156;
+
+    // removed line break between endl << "weight = " (change: end -> endl)
+    cout << "Height = " << height << endl << "weight = " << weight << endl;
+
+    // variable discount is undeclared, (change: discount -> tenPercentDiscount)
+    tenPercentDiscount = (2 * height + weight) % 10;
+
+    billingAmount = PRICE * (1 - tenPercentDiscount) - DECIMAL;
+    // removed second instance of DECIMAL, as a constant, this value cannot be altered
+    // DECIMAL = 7.55;
+
+    // removed blanks and moved second line to meet first line
+    // cannot use special chars in variable name (change: $billingAmount -> billingAmount)
+    cout << "Price = " << PRICE << endl << "Billing Amount = " << billingAmount << endl;
+    
+    // misspelled variable (change: bouns -> bonus)
+    bonus = hoursWorked * PAY_RATE / 50;
+    cout << "Bonus = " << bonus << endl;
+
+    return 0;
+}

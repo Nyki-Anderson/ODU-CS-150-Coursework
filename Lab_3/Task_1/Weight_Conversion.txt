@@ -1,0 +1,26 @@
+Name of student source file: Weight_Conversion.cpp
+Student Name: Nyki Anderson
+Student UIN: 01179386
+Lab CRN: 28415
+Date: January 29th, 2023
+
+Project Title: Weight Conversion 
+Project Description: This program prompts the user to enter the weight of a person in kilograms and outputs the equivalent weight in pounds (rounded to two decimal places).
+
+Algorithm:
+
+1. Declare constant value for:
+  - KILO_TO_POUNDS
+
+2. Declare the variables for:
+  - weightKilos
+  - weightPounds
+
+3. Prompt user to input the weight in kilograms.
+
+4. Calculate the conversion from kilograms to pounds.
+
+5. Set precision and fixed floating-point manipulators to show two decimal places. 
+
+6. Output both the weight in kilograms and in pounds rounded to two decimal places.
+

@@ -1,0 +1,14 @@
+Objective: Assume that you have the following definition of a struct:
+
+struct sportsType
+{
+  string sportName;
+  string teamName;
+  int numberOfPlayers;
+  double teamPayroll;
+  double coachSalary;
+}
+
+- Declare a variable soccer of type sportsType
+- Write C++ code that inputs data into the variable soccer
+- Write C++ code that outputs the variable soccer

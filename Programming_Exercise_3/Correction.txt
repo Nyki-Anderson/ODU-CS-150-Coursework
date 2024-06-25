@@ -1,0 +1,10 @@
+Task: The following program is supposed to read the length and width of a rectangle from the user and then calculates the area of the rectangle. The program should write the area to an output file named output.txt.
+
+Algorithm:
+- Declare and associate ofstream to output.txt and open file.
+- Declare variable for:
+  - length
+  - width
+- Prompt user to input length and width of triangle
+- Calculate area of triangle using l*w 
+- Output area to output.txt

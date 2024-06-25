@@ -1,0 +1,13 @@
+Task: Write an algorithm and a C++ program that prompts the user to enter their letter grade and outputs a message based on the following table.
+
+Algorithm:
+- Declare variables
+  - letterGrade
+- Use switch statement to determine output message
+  - case 'A' Excellent
+  - case 'B' Very Good
+  - case 'C' Passing
+  - case 'D' Not Good, Go Study
+  - case 'F' Not Good, Go Study
+  - default That is not a possible grade
+- Output the message

@@ -1,0 +1,43 @@
+Task 2: Design an algorithm and write a C++ program that prompts the user for the following:
+  - the weight in kilograms
+  - the name of the activity
+  - the number of minutes spent on that activity
+Find the number of METS for the activity in the input file
+Calculate and ouptut an estimate for the total number of calories burned
+
+Calorie Per Minute = 0.0175 x MET x (weight in kilograms)
+
+Algorithm:
+- Declare constants
+  - double CAL_PER_MIN_CONSTANT = 0.0175
+- Declare function prototypes
+  - void OutputHeader()
+  - void InputExercise(int&, string&, int&)
+  - double FindMET(string)
+  - double CalculateCalsBurned(double, int, int)
+  - void OutputCalsBurned(string, double)
+  - void ErrorMessage(char)
+- main():
+  - Declare variables
+    - int weight
+    - string nameActivity
+    - double metValue
+    - int minActivity
+    - double calsBurned
+    - ifstream inData
+  - open input.txt
+  - call OutputHeader(): Outputs a nicely formatted header to stream
+  - call InputExercise(): Prompts user to input weight, activity name, and number of minutes exercising
+    - If weight is at least 0 (if not call ErrorMessage('w'))
+    - If number of minutes is at least 0 (if not call ErrorMessage('m')) 
+  - call FindMET(): Finds user's activity on input.txt
+    - Declare ifstream variable
+    - if MET activity name is not found, call ErrorMessage() 
+    - else store MET value
+  - call CalculateCalsBurned(): Use weight, MET value, MET constant, and number of mintues to calculate the calories burned per minute
+  - call OutputCalsBurned: Outputs the MET value and total number of calories burned
+ErrorMessage(): Give specific error message based on the errorChar value
+  - if 'w', tells user they entered an invalid weight
+  - if 'm', tells user they entered an invalid number of minutes
+  - if 'a', tells user they entered an invalid activity name  
+- close input.txt

@@ -1,0 +1,16 @@
+Task 2: Design an algorithm to find the average of four test scores. The four test scores are weighted equally.
+
+1. Declare all variables as double
+  - test1
+  - test2
+  - test3
+  - test4
+  - avg
+
+2. Request user input for each of the four tests
+
+3. Calculate the average of the four test scores using the following equation:
+
+  avg = (test1 + test2 + test3 + test4) / 4
+
+4. Output the average of the four test scores

@@ -1,0 +1,10 @@
+You have selected number 4 which is GREEN.
+
+ Here are the numbers and matched colors:
+   1 -------------- RED 
+   2 ----------- ORANGE 
+   3 ----------- YELLOW 
+   4 ------------ GREEN 
+   5 ------------- BLUE 
+   6 ----------- INDIGO 
+   7 ----------- VIOLET 

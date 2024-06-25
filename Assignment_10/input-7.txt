@@ -1,0 +1,7 @@
+Susan	Meyers	Accounting	Accountant	susan@dominion.com	12/23/2000	23541
+Mark	Jones	Software		Programmer	mark@dominion.com	02/15/1995	98794
+James	Rogers	Managment	Supervisor	james@dominion.com	05/31/1984	87022
+Sara	Brown	Accounting	Accountant	sara@dominion.com		11/09/1980	53427
+Adam	King	HumanRes.	Recruiter		adam@dominion.com	02/27/1992	56342
+Mia	John	Marketing		Specialist		mia@dominion.com		10/21/1993	23145
+Jenna	Gary	Software		Programmer	jenna@dominion.com	09/23/1988	75623

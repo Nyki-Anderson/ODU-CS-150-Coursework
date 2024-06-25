@@ -1,0 +1,14 @@
+Task 1: A common place to buy juice is from a machine. A new juice machine has been purchased for the gym, but it is not workign properly. The machine sells the following types of juice:
+  - Orange
+  - Apple
+  - Mango
+  - Strawberry-Banana
+You have been asked to write a C++ program for this juice machine so that it can be put into operation. (Create two classes for this task). The program should do the following:
+  1. Show the customer the different products sold by the juice machine.
+  2. Let the customer make the selection
+  3. Show the customer the cost of the item selected
+  4. Accept money from the customer
+  5. Release the item
+
+Algorithm:
+  

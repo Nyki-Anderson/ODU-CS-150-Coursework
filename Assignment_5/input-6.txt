@@ -1,0 +1,10 @@
+Mia	13
+Adam	12
+Noah	14
+John	13
+Sarah	15
+Liam 	14
+Ethan	11
+James	15
+Nick	12
+Gary	13

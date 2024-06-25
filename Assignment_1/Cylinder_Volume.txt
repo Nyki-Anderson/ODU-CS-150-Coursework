@@ -1,0 +1,18 @@
+Assignment: Write an algorithm and a C++ program that reads in the radius and length of a cylinder and computes the area and volume using the following fomulas:
+
+  area = radius * radius * pi
+  volume = area * length
+
+  note: pi = 3.14159
+
+Algorithm
+1. Declare constants:
+    - PI
+2. Declare variables:
+    - radius
+    - length
+    - area
+    - volume
+3. Request input (radius and length of cylinder) from user
+4. Calculate and display the area of the circular cross-section of the cylinder
+5. Calculate and display the volume of the cylinder

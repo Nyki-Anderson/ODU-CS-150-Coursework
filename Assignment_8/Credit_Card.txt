@@ -1,0 +1,71 @@
+Objectives: At the end of each month, you receive the monthly credit card statement. Each month, you recorded the balance and name of the month in a file called input.txt. At the end of the year, you decided to sort the data in a file and find out which month you spent the most money.
+
+Design an algorithm and write a C++ program that does the following:
+  - Read the names of the months and the balances from the input file and store it in two arrays.
+  - Output the arrays to the screen.
+  - Sort the arrays decsending based on the balances
+  - Output the sorted data to the screen.
+  - Output which month you spent the most money.
+
+Algorithm:
+  Include all header files and namespaces:
+    - <iostream>
+    - <iomanip>
+    - <string>
+    - <fstream>
+    - namespace std
+  Define all structs with all members:
+    - struct statementType
+      - string monthList[12]
+      - double balance[12]
+  Declare all function prototypes:
+    - void monthlyStatementHeader()
+    - void readStatement(ifstream inData, statementType& monthlyStatement)
+    - void printUnsortedStatement(statementType monthlyStatement)
+    - void sortedStatementHeader()
+    - void sortStatement(statementType& sortedMonthlyStatement)
+    - void printSortedStatement(statementType sortedMonthlyStatement)
+  int main()
+    - Declare all variables
+      - statementType monthlyStatement, sortedMonthlyStatement
+      - ifstream inData;
+    - Call monthlyStatementHeader()
+    - Call readStatement(inData, monthlyStatement)
+    - Call printUnsortedStatement(monthlyStatement)
+    - Call sortedStatementHeader()
+    - Copy monthlyStatement to sortedMonthlyStatement
+    - Call sortStatement(sortedMonthlyStatement)
+    - Call printSortedStatement(sortedMonthlyStatement)
+  void monthlyStatementHeader()
+    - Print nicely formatted header for the monthly statements
+  void readStatement(ifstream inData, statementType& monthlyStatement)
+    - Open input.txt
+    - while (inData)
+      - for (int index; index < 12; index++)
+        - Read each line of input.txt
+        - Store each month in monthlyStatement.month[i] and monthlyStatement.balance[i] arrays
+    - Close input.txt
+  void printUnsortedStatement(statementType monthlyStatement)
+    - Print neatly formatted chart for month and that months statement
+  void sortedMonthlyStatement(statementType& sortedMonthlyStatement)
+    - Declare local variables
+      - int topUnsorted = 0
+      - int maxIndex
+      - double maxBalance, tempBalance, tempMonth
+    - Sort using selection sort by maxBalance
+      - for (int index = topUnsorted; index < 11; index++)
+        - maxBalance = sortedMonthlyStatement.balance[topUnsorted]
+        - for (int j = 0; j < 12; j++)
+          - if (sortedMonthlyStatement.balance[i] >= maxBalance)
+            - maxBalance = sortedMonthlyStatement.balance[j]
+            - maxIndex = j
+        - tempBalance = sortedMonthlyStatement.balance[topUnsorted]
+        - tempMonth = sortedMonthlyStatement.month[topUnsorted]
+        - sortedMonthlyStatement.balance[topUnsorted] = sortedMonthlyStatement.balance[maxIndex]
+        - sortedMonthlyStatement.month[topUnsorted] = sortedMonthlyStatement.month[maxIndex]
+        - sortedMonthlyStatement.balance[maxIndex] = tempBalance
+        - sortedMonthlyStatement.month[maxIndex] = tempMonth
+        - topUnsorted++
+  - void printSortedStatement(statementType sortedMonthlyStatement)
+    - Print neatly formatted chart for month and that month's statement sorted
+    - Print max statement (sortedMonthlyStatement.month[0])

@@ -1,0 +1,34 @@
+Name of student source file: Marine_Corp_Weight.cpp
+Student Name: Nyki Anderson
+Student UIN: 01179386
+Lab CRN: 28415
+Date: January 29th, 2023
+
+Project Title: Maximum Weight for the Marine Corp
+Project Description: This program prompts the user to input a man's height (between 58 and 80) in inches and calculates their approximate weight in pounds. This is implementing the equation for maximum weight for a man in the United States Marine Corp.
+
+
+Algorithm:
+
+1. Declare header files:
+  - <iostream>
+  - <iomanip>
+  - <cmath>
+
+2. Declare constants
+  - a  = 0.040
+  - b = -0.11
+  - c = 3.9
+
+3. Declare other variables
+  - x 
+  - y
+
+4. Prompt user for man's height in inches (between 58 and 80). Store input into x variable.
+    
+5. Finally, plug that value of x into the original equation. And store this as y.
+
+    y = a * pow(x, 2) - b * x + c
+
+6. Output the value of y (man's approx weight) in pounds.
+

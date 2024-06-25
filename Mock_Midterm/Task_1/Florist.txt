@@ -1,0 +1,42 @@
+Task 1: You work in a florist shop and you are asked to design an algorithm and write a C++ program to help the manager of the shop calculating the prices of flower. The regular price for one dozen of roses is $20.00 including the tax. For special occasions, the shop offers a special discount as follows.
+  - If the number of dozens of roses is at least 10, the discount is 10%
+  - If the number of dozens of roses is at least 20, the discount is 20%
+  - If the number of dozens of roses is at least 30, the discount is 30%
+Design an algorithm and write a C++ program that prompts the user to enter the number of dozens of roses to be purchased. The program calculates the total price and applies the discount baed on the number of roses.
+The program outputs the following:
+  - The percent of the discount (if there is a discount)
+  - The amount of discount (if there is a discount)
+  - The total price
+
+Algorithm:
+- Declare all constants
+  - DISCOUNT_ON_10 = 0.1
+  - DISCOUNT_ON_20 = 0.2
+  - DISCOUNT_ON_30 = 0.3
+- Declare function prototypes
+  - void OutputHeader()
+  - void InputDozens(int&)
+  - bool CalculateDiscount(double&)
+  - void CalculateTotal(double&, double)
+  - void Receipt(double, double, bool)
+- Declare all variables
+  - int numDozens
+  - double discountAmount
+  - double totalPrice
+  - bool applyDiscount
+- int main():
+  - call OutputHeader()
+  - call InputDozens(int&)
+  - call CalculateDiscount(int, double&) store bool in discountApplied
+  - call CalculateTotal(double&)
+  - call Receipt() 
+- void OutputHeader(): Outputs formatted header to top of output stream
+- void InputDozens(): Prompts user for number of dozens of roses
+- bool CalculateDiscount(); Checks if user has discount
+  - if discount calculate discount and return true
+  - else return false
+- void CalculateTotal(): Calculates total with discount 
+- void Receipt(): Outputs user receipt
+  - If qualified for discount displays message of discount applied and amount of discount
+  - Else do not print these messages
+  - Displays total of purchase

@@ -1,0 +1,12 @@
+Task 1: In  a right triangle, the square of the length of one side is equal to the sum of squares of the lenghts of the other two sides. Write an algorithm and C++ program that prompts the user to enter the lengths of tree sides of a triangle (integer numbers) and then outputs a message indicating whether the triangle is a right triangle.
+
+Algorithm:
+- Declare all variables
+  - lengthA
+  - lengthB
+  - lengthC
+- Prompt user for the lengths of each side of the triangle
+- Use if statement to test whether lengthC^2 = lengthA^2 + lengthB^2
+ - if true, the triangle is right
+ - else, the triangle is not right
+- Output whether or not the triangle is right.

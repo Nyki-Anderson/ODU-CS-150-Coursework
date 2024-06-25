@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "name": "C/CC++: Debugger",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: Build Project w/ g++"
+    }
+  ],
+  "version": "2.0.0"
+}

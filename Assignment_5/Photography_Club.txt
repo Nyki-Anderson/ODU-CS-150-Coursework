@@ -1,0 +1,29 @@
+Objectives: Design an algorithm and write a C++ program that reads the names and the ages of students in the photography club from an input file. The program will also do the following:
+   - Calculate and output the name and the age of the oldest student
+   - Calculate and output the name of the age of the youngest student
+   - Calculate and output the average age
+
+Algorithm:
+- Declare variables
+  - currentName (string)
+  - currentAge (int)
+  - maxName (string)
+  - maxAge (int)
+  - minName (string)
+  - minAge (int)
+  - sumAge (double)
+- Declare fstream variables and open input.txt
+  - inFile (ifstream)
+- Read first line and store in currentName and currentAge
+- Set minAge = currentAge, minName = currentName, maxAge = currentAge, and maxName = currentName
+- Format heading of input "Photography Club"
+- Use while statement to iterate through all students(inFile)
+  - Use if statement (currentAge <= minAge)
+    - Set minAge = currentAge
+    - set minName = currentName
+  - Use if else statment (currentAge >= maxAge)
+    - Set maxAge = currentAge
+    - Set maxName = currentName
+  - Output currentName and currentAge
+  - Add currentAge to sumAge
+- Output oldest student, youngest student, and average age

@@ -1,0 +1,41 @@
+****************************************************************************************************
+
+Name of student source file: Energy.cpp
+Student Name: Nyki Anderson
+Student UIN: 01179386
+Lab CRN: 28415
+Date: January 29th, 2023
+
+Project Title: Calculating the Energy it takes to Increase Temperature of Water
+Project Description: This program takes three pieces of user input: (1) the weight of water in kilograms, (2) the initial temperature of the water in degrees Celsius, and (3) the final temperature of the water, also in degrees Celsius. It then calculates the energy (in joules) required to raise the temperature of the water. It then displays the value of energy.
+
+****************************************************************************************************
+
+Objective: Write an algorithm and a C++ program that calculates the energy needed to heat water from an initial temperature to a final temperature. Your program should prompt the user to enter the amount of water in kilograms and the initial and final temperature of the water. The formula to compute the energy is:
+
+  Q = M * (finalTemperature - initialTemperature) * 4184
+  
+Where M is the weight of water in kilograms, initial and final temperature are in degrees Celsius, and energy Q is measured in joules.
+
+
+Algorithm:
+
+1. Declare all variables:
+  - weightOfWater
+  - initialTemp
+  - finalTemp
+  - energyQ
+  - header
+  - border
+
+2. Format header of the output.
+
+3. Prompt user for weightOfWater in kilograms, initialTemp and finalTemp in degrees Celsius.
+
+4. Store user input in variables.
+
+5. Calculate energy required to heat water to from the initialTemp to the finalTemp using the equation:
+
+  energyQ = weightOfWater * (finalTemp - initialTemp) * 4184
+
+6. Display the value of energyQ.

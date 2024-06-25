@@ -1,0 +1,30 @@
+{
+  "files.associations": {
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "iomanip": "cpp",
+    "istream": "cpp",
+    "iosfwd": "cpp"
+  },
+  "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#afab34",
+    "activityBar.background": "#afab34",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#257b78",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#afab34",
+    "statusBar.background": "#888528",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#afab34",
+    "statusBarItem.remoteBackground": "#888528",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#888528",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#88852899",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#888528"
+}

@@ -1,0 +1,13 @@
+Task - Write an algorithm and a C++ program that mimics a calculator. The program should take as input two integers and the operation to be performed. It should then output the numbers, the operator, and the result. (For division, if the denominator is zero, output an appropriate message.)
+
+Algorithm:
+- Declare variables:
+  - mathOperator
+  - num1
+  - num2
+- Prompt user to enter two numbers 
+- Store two numbers in num1 and num2
+- Prompt user to enter operation
+- Store operation in operator
+- Calculate desired mathematical statement
+- Output the result

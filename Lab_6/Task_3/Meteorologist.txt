@@ -1,0 +1,27 @@
+Task: You are hired to assist a meterologist. Your job is to analyze the data. You received a file that contains the temperatures for the month of January for the city of Norfolk, VA. Design an algorithm and write the C++ program that reads the temperature from the input file and analyze the data as follows:
+  - Display the data to the screen. 
+  - Calculate and output the average temperature during the month of January.
+  - Calculate and output the minimum temperature during the month of January.
+  - Compute and output which day of the month the minimum temperature occurred.
+
+Algorithm:
+- Include headers: 
+  - <iostream>
+  - <iomanip>
+  - <fstream>
+- Declare all variables
+  - day (int)
+  - currentTemp (int)
+  - minTemp (int)
+  - minDay
+  - sumTemp (double)
+- Declare, associate, and open the inData variable for input.txt file
+- Read in the first value from input.txt. Set the data as currentTemp and minTemp
+- Use for statement to iterate through the days of January
+  - Read, store, and output the next day and temperature (formatted)
+  - Use if statement to compare (currentTemp < minTemp)
+    - if true, set currentTemp to minTemp and set day as minDay
+  - Add currentTemp to sumTemp
+- Close input.txt
+- Output the sumTemp/31.0
+- Output the lowest day and temperature.

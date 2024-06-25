@@ -1,0 +1,3 @@
+Objective - A car dealership has 10 salespersons. Each salesperson keeps track of the number of cars sold each month and  reports it to the management at the end of the month. The management keeps the data in a file and assigns a number 1-10 to each salesperson.
+
+The program declares an array, cars, of 10 components of type int to store the number of cars sold by each salesperson. The program outputs the total number of cars sold at the end of each month and outputs the salesperson number selling the maximum number of cars (assume their data is in the file cars.txt).

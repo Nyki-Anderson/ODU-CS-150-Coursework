@@ -1,0 +1,6 @@
+Jacket	17	59.99
+Shirt	40	34.99
+Dress	25	45.00
+Pant	28	29.00
+Skirt	24	34.00
+

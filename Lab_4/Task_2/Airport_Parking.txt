@@ -1,0 +1,18 @@
+Task: The short term, 0-24 hour, parking fee, F, at an international airport is given by the following formula:
+
+  F = 5, if 0 < h <= 3
+  F = 6 x int(h +1), if 3 < h <= 9
+  F = 60, if 9 < h <= 24
+
+Where int(h + 1) is the integer value of h+1. Write an algorithm and a C++ program that prompts the user to enter the number of hours a car is parked at the airport and outputs the parking fee.
+
+Algorithm:
+- Declare variables
+  - hoursParked
+  - fee
+- Prompt user to input number of hours parked
+- Use if statement to test which interval the time falls into
+  - if hoursParked is between 0 and 3, the fee is 5
+  - else if hoursParked is between 3 and 9, the fee is given by the equation 6 x int(h+1)
+  - else if hoursParked is between 9 and 24, the fee is 60
+Output the fee

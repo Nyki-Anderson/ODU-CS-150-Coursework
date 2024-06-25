@@ -1,0 +1,12 @@
+Exercise: Design an algorithm and write a C++ program that prompts the user to input the temperature in degrees Celsius (C). Convert the temperature to degreees Farenheit (F) using the provided formula.
+
+Formula:
+  F_Temp = C_Temp * 1.80 + 32
+
+Algorithm:
+  1. Declare the variables:
+      - fahrenheit
+      - Celsius
+  2. Request user to input temperature in Celcius.
+  3. Calculate Farenheit with Celsius value and formula above.
+  4. Display Farenheit temperature

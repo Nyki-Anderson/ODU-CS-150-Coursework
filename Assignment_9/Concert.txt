@@ -1,0 +1,70 @@
+Objective: You are hired to design an algorithm and write a C++ program for ODU Concert Promoter. The capacity of the venue is 100 seats, and the price of the ticket is $10. Your program will do the following:
+  - Create a struct ConcertPromoter that records the tickets sold for a performance at ODU. The struct has the following members:
+    - The name of the Concert
+    - The price of a ticket
+    - The capacity of the venue
+    - The number of remaining tickets (unsold)
+  - Prompt the user to enter B if they want to buy tickets, or the user will enter F if they wan to finish buying tickets
+  - If the user wants to buy tickets, then prompt the user to enter the number of tickets. The number of tickets must not exceed the unsold tickets
+  - Calculate and output the price for the tickets
+  - After buying the tickets the program updates and outputs the number of unsold tickets
+  - Prompt the user again to enter B if they want to buy tickets or the user will enter F if they want to finish buying tickets
+
+Algorithm:
+  Include all header files:
+    - <iostream>
+    - <iomanip>
+    - <string>
+
+  Define struct ConcertPromoter
+    - string concertName
+    - double ticketPrice
+    - int capacity
+    - double unsoldTickets
+
+  Declare all function prototypes:
+    - void initiateConcert(ConcertPromoter& concert1)
+    - bool user_decision()
+    - void number_of_tickets(ConcertPromoter concert1, int& ticketsBuying)
+    - void print_receipt(ConcertPromoter concert1, int ticketsBuying)
+    - void update_tickets(ConcertPromoter& concert1, int ticketsBuying)
+
+  int main()
+    Declare all variables
+      - ConcertPromoter concert1
+      - int ticketsBuying
+    Use while structure (user_decision())
+      - Call number_of_tickets(concert1, ticketsBuying)
+      - Call print_receipt(concert1, ticketsBuying)
+      - Call update_tickets(concert1, ticketsBuying)
+      - Set ticketsBuying to 0 for next purchase
+  
+  void print_header(ConcertPromoter concert1)
+    Print nicely formatted header with concert name
+    
+  void initiate_concert(ConcertPromoter& concert1)
+    - Set all values for all struct members
+
+  bool user_decision()
+    Declare all local variables 
+      - char userInput
+    If statement to check whether user input 'B' or 'F'
+      - if 'B' return true
+      - else return false
+
+  void number_of_tickets(ConcertPromoter concert1, int& ticketsBuying)
+    Use while statement until user inputs valid number of tickets
+      Prompt user to input the number of tickets they wish to buy
+        - Access struct member unsoldTickets to show how many tickets are available
+      Check if valid entry for number of tickets
+        - If there are enough tickets, store in ticketsBuying variable
+        - Else prompt user to input a valid number of tickets
+
+  void print_receipt(ConcertPromoter concert1, int ticketsBuying)
+    Print price of a ticket
+    Calculate price of tickets to buy
+    Print number of tickets available
+
+  void update_tickets(ConcertPromoter& concert1, int ticketsBuying)
+    Update struct member unsoldTickets
+    Print number of tickets remaining

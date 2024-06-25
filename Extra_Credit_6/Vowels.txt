@@ -1,0 +1,62 @@
+Objectives: Design an algorithm and write a C++ program that reads a paragraph from an input file named "paragraph.txt" and then determines and prints how many of each vowel (a,e,i,o, and u) appear in the entire file. The vowels can be upper case or lower case. Have a separate counter for each vowel. Also count and print the number of non-vowel characters.
+
+Note that non-vowels include:
+  - all other characters
+  - numbers
+  - periods
+  - spaces
+  - commas
+  - etc.
+
+Algorithm:
+  Declare header files and namespace
+  - <iostream>
+  - <fstream>
+  - <cstrings>
+
+  Define struct charCountType
+  - int aCount = 0
+  - int eCount = 0
+  - int iCount = 0
+  - int oCount = 0
+  - int uCount = 0
+  - int otherCount = 0
+
+  Declare function prototypes
+  - void readParagraph(ifstream& inData, char paragraphChars[], int& paragraphLength)
+  - void countVowels(char paragrapChars[], paragraphType& charCounts, int paragraphLength)
+  - void printCharacterCounts(paragraphType paragraphCounts, int paragraphLength)
+
+  int main()
+  - Declare variables
+    - char paragraphChars[1000]
+    - paragraphType charCounts
+    - int paragraphLength
+    - ifstream inData
+  - Call readParagraph(inData, paragraphChars, paragraphLength)
+  - Call countVowels(paragraphChars, paragraphCounts, paragraphLength)
+  - Call printCharacterCounts(paragraphCounts, paragraphLength)
+
+  void readParagraph(ifstream& inData, char paragraphChars[], int& paragraphLength)
+  - Use while structure to read data until the end of the file
+    - Read in contents of paragraph.txt
+    - Store in paragraphChars[] array 
+    - Use strlen() function to determine the length of the string, store in paragraphLength
+
+  void countVowels(char paragrapChars[], paragraphType& charCounts, int paragraphLength)
+  - Use for structure to iterate through each character of the paragraph and classify each character in one of six categories:
+    - If (char == 'a' || char == 'A')
+      - Add 1 to charCounts.aCount
+    - Else if (char == 'e' || char == 'E')
+      - Add 1 to charCounts.eCount
+    - Else if (char == 'i' || char == 'I')
+      - Add 1 to charCounts.iCount
+    - Else if (char == 'o' || char == 'O')
+      - Add 1 to charCounts.oCount
+    - Else if (char == 'u' || char == 'U')
+      - Add 1 to charCounts.uCount
+    - Else
+      - Add 1 to charCounts.otherCount
+
+  void printCharacterCounts(paragraphType charCounts, int paragraphLength)
+  - Print number of each vowel and other characters

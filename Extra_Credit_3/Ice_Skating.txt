@@ -1,0 +1,24 @@
+Task: You are hired by an ice-skating center. Your job is to write a program to calculate the admission fees as follows:
+  - Children 6 and younger = $8.50
+  - Children 7 and older = $10.50
+  - Adults = $12.00
+  - Seniors = $9.50
+There will be 10% tax.
+Design an algorithm and write a C++ program that prompts the user to input the number of tickets in each age grpup. The program calculates and outputs the admission fees.
+
+Algorithm:
+- Declare all constants
+  - ADMISSION_6_UNDER
+  - ADMISSION_7_OLDER
+  - ADMISSION_ADULT
+  - ADMISSION_SENIOR
+  - TAX
+- Declare all variables
+  - costAdmission
+  - numChildrenUnder6
+  - numChildrenOlder7
+  - numAdults
+  - numSeniors
+- Prompt user to input number for each age group
+- Calculate costAdmission for each age group, sum those fees, and add tax
+- Output subtotal, tax, and total

@@ -1,0 +1,19 @@
+Task - Modify the Fibonnaci Number program as follows: 
+Instead of using if-else statement to calculate the nth Fibonacci number, you need to use switch statemnet to calculate the nth Fibonacci number.
+
+Algorithm:
+- Declare variables
+  - previous1
+  - previous2
+  - counter
+  - current
+  - nthFibonacci
+- Prompt user to input the first two Fibonacci numbers
+- Store those numbers as previous1 and previous2
+- Prompt user to input the desired Fibonacci number
+- Store that number as nthFibonacci
+- Use switch statement to determine following cases:
+  - case 1 : the Fibonacci number is previous1
+  - case 2 : the Fibonacci number is previous2
+  - default : use while statement to iteratively calculate Fibonacci numbers to the nthFibonacci
+- Output the nthFibonacci

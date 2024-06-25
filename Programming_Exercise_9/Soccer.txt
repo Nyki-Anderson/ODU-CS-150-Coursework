@@ -1,0 +1,5 @@
+Objective: Rewrite the program to do the following:
+  - Use a class instead of a struct sportsType
+  - All the members of the class are public members except for coachSalary, coachSalary should be a private members
+  - Add a member function to the class to set the value of the private member coachSalary
+  - Add a member function to the class to print the value of the private member coachSalary

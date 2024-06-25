@@ -1,0 +1,27 @@
+Task 2: Write an algorithm and C++ program that converts 24-hour notation to 12-hour notation. There should be at least three function: (1) input, (2) conversion, (3) output. Record the AM/PM info as value of type char, 'A' for AM and 'P' for PM. Thus, the function for doing the conversion will have a call-by-reference formal parameter of type char to record whether it is AM or PM. Include a loop that lets the user repeat this computation for new input values again and again until the user says he or she wants to end the program.
+
+Algorithm:
+1. Declare header files
+  - iostream
+  - iomanip
+2. Declare function prototypes
+  - void UserInputs(int&, int&)
+  - char ConvertTime(int&)
+  - void OutputResults(int, int, char)
+3. Declare local variables
+  - int military_hour
+  - int minutes
+  - int converted_hour
+  - char day_or_night
+4. Use while structure to continue to prompt user for input after every conversion until they enter -1
+5. Call UserInputs(int&, int&) to get military time
+  - use cin to get first number, stop at ":", and get the second number
+6. Call ConvertTime(int& military_hour)
+  - declare day_or_night locally
+  - if military_hour > 12
+    - convert_hour = military_hour % 12 + 2
+    - day_or_night = 'P'
+  - else
+    - day_or_night = 'A'
+  - return day_or_night
+7. Call OutputResults(int convert_hour, int minutes, char day_or_night)

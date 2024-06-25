@@ -1,0 +1,82 @@
+Task 3: Write an algorithm and a C++ program that reads students' names (first name and last name) followed by their test scores. The program should output each student's name followed by their test scores and the relevant grade. It should also print the highest test score and the name of the students having the highest test score.
+
+Student data should be stored in a struct variable of type studentType, which has four components: 
+  - studentFName
+  - studentLName
+  - testScore
+  - grade
+Suppose that the class has 20 students. Use an array of 20 comoponents of type studentType.
+
+Your program must contain at least the following functions:
+  1. A function to read the students' data into the array
+  2. A function to assign the relevant grade to each student
+  3. A function to find the highest test score
+  4. A function to print the names of the students having the highest test score.
+
+  Your program must output each student's name in this form: last name followed by a comma, followed by a space, followed by the first name; the must be left justified. Moreover, other than declaring the variables and opening the input and outout files, the function main should only be a collection of function calls.
+
+  Algorithm:
+    Declare all header files and namespaces
+    - <iostream>
+    - <fstream>
+    - <iomanip>
+    - <string>
+    Define nameType struct
+    - string first
+    - string last
+    Define studentType struct
+    - nameType studentName
+    - int testScore
+    - char grade
+    Declare function prototypes
+    - void readStudentData(ifstream &inData, studentType classData[]);
+    - void assignGrade(studentType classData[]);
+    - void findHighestScores(studentType classData[], nameType highScoreStudents[], int &highScore, int &length);
+    - void printStudentData(ofstream &outData, studentType classData[]);
+    - void printHighScores(ofstream &outData, nameType highScoreStudents[], int highScore);
+
+    int main()
+    - Declare variables
+      - studentType classData[20]
+      - nameType highScoreStudents[20]
+      - int highScore, length
+      - ifstream inData
+      - ofstream outData
+    - Call readStudentData(inData, classData)
+    - Call assignGrade(classData)
+    - Call findHighestScores(classData, highScoreStudents, highScore, length)
+    - Call printStudentData(outData, classData)
+    - Call printHighScores(outData, classData, highScoreStudents, highScore, length)
+
+    void readStudentData(studentType& classData)
+    - Open input.txt
+    - Use for structure to iterate through all 20 students in classData array
+      - Use while statement to read through all data in input.txt 
+        - Store first name, last name, and test score in classData array
+        - ifstream ignore until next line character
+    - Close input.txt
+
+    void assignGrade(studentType classData[])
+    - Use for structure to iterate through all 20 student records in classData array
+      - Use nested if... if else... statements to classify student's score into a grade
+
+    void findHighestScores(studentType classData[], nameType highScoreStudents[], int& highScore, int& length)
+    - Declare local variables
+      - int maxScore = 0
+      - int index = 0
+    - Use for structure to iterate through all 20 students in classData array
+      - Use if structure to compare current student score and maxScore
+        - if current student score is greater than maxScore, that score is the new maxScore
+    - Set highScore variable to maxScore found in classData
+    - Use another for structure to capture all the students with that highScoreStudents
+      - if current student's score = highScore then store the first and last name in the highScoreStudents array
+      - increase the length variable which keeps track of how many students have the high score
+
+  void printStudentData(studentType classData[])
+  - Print table headers
+  - Print each student's data in following format:
+    lastname, firstname testScore grade
+  
+  void printHighScores(nameType highScoreStudents[], int highScore)
+  - Print highScore
+  - Print all the student's with that high score

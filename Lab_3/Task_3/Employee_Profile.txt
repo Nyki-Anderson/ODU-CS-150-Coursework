@@ -1,0 +1,50 @@
+Name of student source file: Employee_Profile.cpp
+Student Name: Nyki Anderson
+Student UIN: 01179386
+Lab CRN: 28415
+Date: January 29th, 2023
+
+Project Title: Automated Employee Profile Builder
+Project Description: This program takes a txt file containing space delimited employee profile information and translates the data into a human-friendly file format.
+
+Algorithm:
+
+1. Include fstream, string, and iomanip header files.
+
+2. Declare variables:
+  - inFile
+  - outFile
+  - firstName
+  - lastName
+  - department
+  - grossSalary
+  - bonus
+  - taxes
+  - paycheck
+  - distanceTraveled
+  - travelTime
+  - avgSpeed
+  - coffeeCupsSold
+  - costPerCup
+  - salesAmount
+
+3. Open and associate both inData.txt and outData.txt with their corresponding ifstream and ofstream variables.
+
+4. Read raw data into input file stream and store in the appropriate variables. Test each input as they are read in using peek and putback functions to be sure proper data type is stored and that outData.txt can be overwritten when inData.txt changes.
+
+5. Calculate paycheck using this equation:
+
+    paycheck = grossSalary * (1 + 0.01 * bonus) * (1 - 0.01 * taxes)
+
+6. Calculate avgSpeed using this equation:
+
+    avgSpeed = distanceTraveled / travelTime
+
+7. Calculate salesAmount using this equation:
+
+    salesAmount = coffeeCupsSold * costPerCup
+
+8. Write to the ouput file and insert processed data (data that has been properly formatted using <iomanip>).
+
+9. Close both the input and output files. 
+

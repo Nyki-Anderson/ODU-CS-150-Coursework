@@ -1,0 +1,30 @@
+Task1: Complete 8 functions in the template source code file. The program will input teh length and width of a rectangular room, calculate the area of the room, determine the cost of painting the room. Notice that the headings for the the functions are given.
+
+You will need to fill the function bodies and redo the return statements so that the correct values are returned. T
+
+Algorithm:
+1. Declare header files to include
+  - cmath
+  - iomanip
+  - iostream
+2. Declare function prototypes for all 8 functions  
+  - void ProgrammerInfo()
+  - int GetLength()
+  - int GetWidth()
+  - double GetGallonCost()
+  - int  ComputeArea(int, int)
+  - int FindGallons(int)
+  - double ComputeCost(double, int)
+  - void PrintResults(int, int, double)
+3. Declare constant variable
+  - int COVERAGE = 200
+4. Declare all variables locally in main()
+5. Print nicely formatted programmer info using ProgrammeerInfo()
+6. Prompt user for length and width of room in GetLength() and GetWidth()
+7. Prompt user for cost per gallon with GetGallonCost()
+8. Calculate the area of the room using ComputeArea(room_length, room_width) 
+9. Calculate the number of paint needed to cover room with FindGallons(paint_area) and constant COVERAGE
+  - Divide paint_area by COVERAGE
+  - Round up using ceil()
+10. Calculate cost of paint needed using ComputeCost(num_gallons, cost_per_gallon)
+11. Output the results using PrintResults()

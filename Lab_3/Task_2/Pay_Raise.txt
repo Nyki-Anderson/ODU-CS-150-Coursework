@@ -1,0 +1,43 @@
+Name of student source file: Pay_Raise.cpp
+Student Name: Nyki Anderson
+Student UIN: 01179386
+Lab CRN: 28415
+Date: January 29th, 2023
+
+Project Title: Retroactive Pay Raise
+Project Description: This program calculates employees 7.6% pay increase (retroactive 6 months) based on their previous annual salary. It outputs this information to the terminal as well as writing it to a .txt file.
+
+Algorithm:
+
+1. Declare all constants:
+  - RAISE = 0.076
+
+2. Declare all other variables (including fstream for file):
+  - oldAnnualSalary
+  - newAnnualSalary
+  - newMonthlySalary
+  - retroSalary
+  - fileOutput
+
+3. Prompt user to enter their current annual salary.
+
+4. Calculate their new annual salary with the equation:
+
+    newAnnualSalary = oldAnnualSalary * (1 + RAISE)
+    
+5. Calculate their new monthly salary with the equation:
+
+    newMonthlySalary = newAnnualSalary / 12
+
+6. Calculate their retroactive salary due with the equation:
+
+    retroSalary = (newAnnualSalary / 6) - (oldAnnualSalary / 6)
+
+7. Declare <iomanip> header functions to format the output:
+  - fixed
+  - showpoint
+  - setprecision()
+
+8. Next output to the terminal all of the info
+
+9. Declare <fstream> header file, declare file stream variables, associate them with input and output functions, output to open file, and close file.

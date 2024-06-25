@@ -1,0 +1,20 @@
+Objectives: Students at a local elementary school volunteered to donate toys to a local daycare center. Each student reported the number of toys he/she donated.
+
+Design an algorithm and C++ Program that will do the following:
+  - Prompt the user to input the total number of kids that participated in this activity.
+  - Use a loop to read the name of the student and number of toys they donated.
+  - Calculate and output the total number of toys donated to the daycare center.
+
+Algorithm:
+- Declare variables
+  - i (int)
+  - numStudents (int)
+  - name (string)
+  - numToys (int)
+  - totalToys (int)
+- Format header for output
+- Prompt user to input number of students
+- Use for loop (i=0; i<numStudents; i++)
+  - Prompt user to input name of student and number of toys they donated
+  - Add the number of toys donated to the total number of toys
+- Output the total number of toys donated. 

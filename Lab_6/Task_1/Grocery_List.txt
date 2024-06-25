@@ -1,0 +1,15 @@
+Task - Write an algorithm and a C++ program that prompts the user to enter how many items they purchased at the grocery store today. Then prompt the user to enter the price for each item. Use a loop structure to read the price of each item. Calculate the total cost to the screen.
+
+Algorithm:
+- Declare all variables
+  - numItems (int)
+  - priceForItem (double)
+  - totalCost (double)
+  - count (int)
+- Prompt the user to input how many items they purchased today
+  - Store this value as numItems
+- Use while loop to prompt user for the price of each item (compare count to numItems)
+  - Store the price in priceForItem
+  - Add price to totalCost
+  - increment count by 1
+- Output the cost of each item and the total cost

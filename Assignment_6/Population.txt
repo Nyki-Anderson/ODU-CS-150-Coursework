@@ -1,0 +1,24 @@
+Objectives: You must use a loop structure to receive credit for this assignment.
+
+The population of town A is less than the population of town B. However, the population of town A is growing faster than the population of town B. Design an algorithm and write a C++ program that prompts the user to enter the population and growth rate of each town. The program outputs after how many years the population of town A will be greater than or equal to the population of town B and the populations of both towns at that time.
+
+Hint: Use static_cast<>() when calculating the new population every year.
+
+Algorithm:
+0. Declare prototype function 
+  - void popGrowth(int&, int&, double, double) 
+1. Declare all variables in main
+  - popA (int)
+  - popB (int)
+  - growthA (double)
+  - growthB (double)
+  - year (int)
+2. Prompt user to input population and rate of growth for town A and B
+3. Check that town B is initially greater than town A
+  - if popA >= popB output a message that town A's population is already greater than town B and end program
+  - else enter while structure
+4. Use while structure to iterate through each year until popA >= popB
+  - Use function void popGrowth(int& popA, int& popB, double growthA, double growthB) 
+    - calculate popA and popB by multiplying each to their respective rate and adding that to the populations
+  - add 1 year to year
+5. Output year that popA >= popB and their respective populations

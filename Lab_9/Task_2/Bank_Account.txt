@@ -1,0 +1,41 @@
+Task 2: Consider a bank certificate of deposti, which is often called a CD. A CD is a bank account that does not allow withdrawals for a specified number of months. A CD naturally has three pieces of data associated with it:
+  1. The account balance
+  2. The interest rate
+  3. The term (number of months until maturity)
+Write a C++ program that includes the definition of a struct called CDAccount that can be used for this kind of account. The particular bank specializes in short-term CDs, so the term will always be 12 or fewer months. Write a function to read the account balance, the interest rate, and the term. Your program calculates and outputs the balanace after maturity as follows:
+  - Interest = Account Balance * (InterestRate / 1000 *(term/12))
+  - Account Balance = Account Balance + Interest
+
+Algorithm:
+  Include all header files and namespaces
+  - <iostream>
+  - <string>
+  Define struct CDAccount
+  - double balance
+  - double interestRate
+  - int term
+  Declare function prototypes
+  - void inputAccountData(CDAccount& newAccount)
+  - void calculateMatureAccount(CDAccount newAccount, double& matureBalance)
+  - void printAccountData(CDAccount newAccount, double matureBalance)
+  int main()
+  - Declare all variables
+    - CDAccount newAccount
+    - double matureBalance
+  - Call inputAccountData(newAccount)
+  - Call calculateMatureAccount(newAccount, matureBalance)
+  - Call printAccountData(newAccount, matureBalance)
+  void inputAccountData(CDAccount& newAccount)
+  - Prompt user to input:
+    - Account balance and store in newAccount.balance
+    - Interest rate and store in newAccount.interestRate
+    - Term and store in newAccount.term
+  void calculateMatureAccount(CDAccount newAccount, double& matureBalance)
+  - Declare local variables
+    - double interestAccrued
+  - Calculate interestAccrued
+    - interestAccrued = newAccount.balance * (newAccount.interest * (newAccount.term / 12))
+  - Add creditAccrued to balance
+    - matureBalance = newAccount.balance + interestAccrued
+  void printAccountData(CDAccount newAccount, double matureBalance)
+  - Print when the account matures and how much the balance will be

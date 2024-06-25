@@ -1,0 +1,53 @@
+Task 2: Write a C++ program that converts entered in Roman numerals to a postive integer. Your program consist of a class. An object of type romanType should do the following:
+ - Store the number as a Roman numerals
+ - Convert and store the number as a positive integer
+ - Print the number as a Roman numeral or postive integer as requested by the user
+The integer values of the Roman numerals are;
+  - M 1000
+  - D 500
+  - C 100
+  - L 50
+  - X 10
+  - V 5
+  - I 1
+
+Algorithm:
+  Include all header files and namespaces
+    <iostream>
+    <string.h>
+
+  RomanClass class definition
+    public:
+      char romanNumber[100]
+      int positiveInteger
+      void get_roman_numeral()
+      void convert_to_integer()
+      void print_number()
+
+  int main()
+    RomanClass number1
+    Call number1.get_roman_numeral()
+    Call number1.convert_to_integer()
+    Call number1.print_number()
+
+  void RomanClass::get_roman_numeral()
+    Use EOF while function (cin)
+      Store input stream in cstring array romanNumber
+
+  void RomanClass::convert_to_integer()
+    for (int i = 0; i < strlen(romanNumber); i++)
+      Use switch statement romanNumber[i]
+        Depending on which character is next += positiveInteger
+
+  void RomanClass::print_number()
+    Declare local variables
+      - char userChoice
+    Prompt user to decide what format they would like the number in
+      toupper(userChoice)
+      Use while statement (userChoice != 'R' && userChoice != 'I')
+        If user inputs 'R'
+          - Print the number in roman numerals
+        Else if user inputs 'I'
+          - Print the number as a positive integer
+
+  

@@ -1,0 +1,23 @@
+Task 1 - Design an algorithm that computes the straight-line distance between two points in a plane.
+
+Formulas:
+  Distance = sqrt((x2-x1)^2 +(y2-y1)^2)
+
+1. Declare all variables as double:
+  - x1
+  - x2
+  - y1
+  - y2
+  - side1
+  - side2
+  - distance
+
+2. Request values from user for (x1, y1) and (x2, y2)
+
+3. Store values for x1, y1, x2, y2
+
+4. Calculate length of (x1 - x2) and (y1 - y2) and store in side1 and side2 respectively
+
+5. Calculate distance using sqrt function and square the sides
+
+6. Output the value for distance

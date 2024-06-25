@@ -1,0 +1,9 @@
+Objective: The while loop in the following program is supposed to read some numbers until it reaches a sentinal (in this case, -1). It is supposed to add all the numbers except for the sentinel. If the data looks like (12 5 39 3 -1) the program does not add the numbers correctly. Correct the program so that it adds the numbers correctly.
+
+Algorithm:
+- Declare variables
+  - total
+  - numbers
+- Prompt the user to enter the numbers to be added
+- Use while structure to compute the sum until the sentinel -1 is reached
+- Output the sum

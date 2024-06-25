@@ -1,0 +1,28 @@
+Task 1 - Write an algorithm and a C++ program that declares an array alpha of 50 components of type double. Initialize the array so that the first 25 componenents are equal to the square of the index variable, and the last 25 components are equal to the index variable. Output the array so that 10 elements per line are printed.
+
+Algorithm:
+- Declare header files
+  - <iostream>
+  - <cmath>
+- Declare function prototypes
+  - void squareIndex(double alpha[])
+  - void tripleIndex(double alpha[])
+  - void printArray(double alpha[])
+- int main()
+  - Declare all variables
+     alpha[50]
+  - Call squareIndex()
+  - Call tripleIndex()
+  - Call outputArray()
+- void squareIndex(double alpha[])
+  - Use for loop with index < 25
+    - square the index using pow()
+    - store value in alpha[index]
+- void tripleIndex(double alpha[])
+  - Use for loop with index < 50
+    - multiply the index by 3
+    - store value in alpha[index]
+- void printArray(double alpha[])
+  - Use outer for loop to iterate 5 times to print 5 rows
+    - Use inner for loop to iterate 10 times to print 10 cols
+      - print each value in alpha[]

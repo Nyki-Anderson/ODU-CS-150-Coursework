@@ -1,0 +1,25 @@
+Task: Write an algorithm and a C++ program that reads in a length in feet and inches and outputs the equivalent length in meters and centimeters. Use at least three functions: one for input, one or more for calculating, and one for output. Include a loop that lets the user repeat this computation for new input values until the user says he or she wants to end the program. There 0.3048 meters in a foot, 100 cm in a meter, and 12 inches in a foot.
+
+Algorithm:
+- Declare all constants
+  - METERS_IN_A_FOOT = 0.3048
+  - CENTIMETERS_IN_A_METER = 100
+  - INCHES_IN_A_FOOT = 12
+- Declare all variables
+  - lengthFeet
+  - lengthInches 
+  - lengthMeters
+  - lengthCentimeters
+- Function: 
+  - Prompt user to input length in feet and inches, store in lengthFeet and lengthInches
+- Function:
+  - Convert lengthInches to feet and add to lengthFeet
+  - Convert lengthFeet into meters and store in lengthMeters
+  - lengthMeters % CENTIMETERS_IN_A_METER and store in lengthCentimeters
+- Function:
+  - Output the length in meters and centimeters
+  - Ask if want to continue
+- Function:
+  - Give error message if user input is not in correct format
+- Function:
+  - Ask if want to continue

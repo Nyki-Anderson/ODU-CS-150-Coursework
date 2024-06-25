@@ -1,0 +1,14 @@
+Task - Write an algorithm and a C++ program that takes two integers as input. It then outputs how many times the larger number is divisible by the smaller number. If a remainder exists, the program will output these numbers are not divisible. Repeat the program until the user chooses to exit.
+
+Algorithm:
+- Declare variables
+  - number (int)
+  - divisor (int)
+  - repeat (char)
+- Prompt user to input the number and divisor then store these values in number and divisor
+- Use a while statement to enter loop and repeat program while loop is true. Loop is true if user enters 1, and is false when any character != to 1 is entered.
+  - use if statement to test if number is divisible by divisor  
+    - if divisor is 0, display error message
+    - else if the number entered is divisible by divisor (number % divisor = 0) then divide number by divisor and store in result and output result
+    - else output message that number is not divisible by the divisor
+  - prompt user to enter 1 to continue and any other character to exit.

@@ -1,0 +1,31 @@
+Task 2 - Write an algorithm and a C++ program that asks the user to enter a store's sales for each day of the week. The amounts should be stored in an array. Use a loop to calculate the total sales for the week and display the result. Use a function to sort the sales in ascending order. Display the results as shown in the sample output.
+
+Algorithm:
+- Include header files and namespaces
+  - <iostream>
+  - <iomanip>
+- Declare function prototypes
+  - void inputSales(double weeklySales[], double& totalSales);
+  - void sortSales(double weeklySales[], double dayOfWeek[]]
+  - void printWeeklyReport(const double weeklySales[], const double dayOfWeek[], double totalSales);
+- int main()
+  - Initialize parallel arrays both with 7 elements
+    - double weeklySales[7]
+    - int dayOfWeek[7]
+  - Declare other variables
+    - double totalSales
+  - Call inputSales()
+  - Call sortSales()
+  - Call printWeeklyReport()
+- void inputSales(double weeklySales[], double& totalSales)
+  - Use for loop to iterate through 7 days of week
+    - Store each input into weeklySales array
+    - Add each day's sales to totalSales
+- void sortSales(double weeklySales[], double dayOfWeek[]
+  - Use selection sort to put in ascending order
+    - Find smallest element in unsorted portion of list
+    - Move it to the top of the unsorted position by swapping the the element currently there
+    - Repeat
+- void printWeeklyReport(const double weeklySales[], const double weeklySales[],double totalSales)
+  - Print total sales
+  - Loop through each day of the week to print nicely fomratted chart of daily sales

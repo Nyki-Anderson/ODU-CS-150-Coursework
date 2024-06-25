@@ -1,0 +1,23 @@
+Task 3: A milk carton can hold 3.78 liters of milk. Each morning, a dairy farm ships cartons of milk to a local grocery store. The cost of producting one liter of milk is $0.38, and the profit of each carton of milk is $0.27. 
+
+Equations:
+  
+
+1. Declaring the constants
+  - CARTON_CAPACITY 
+  - COST_OF_ONE_LITER
+  - PROFIT_ON_A_CARTON
+
+2. Declaring variables
+  - milkQuanitity
+  - numOfMilkCartons
+  - totalCostOfMilk
+  - profit
+
+3. Request user input for total number of liters of milk
+
+4. Calculate and display number of cartons needed to contain the input amount of milk
+
+5. Calculate and display cost of producing the input amount of milk
+
+6. Calculate and display profit off of input amount of milk

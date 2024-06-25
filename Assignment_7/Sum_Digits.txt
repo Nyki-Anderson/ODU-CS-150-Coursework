@@ -1,0 +1,47 @@
+Objectives: You must use a function to receive credit for this assignment.
+
+Design an algorithm and write a C++ program that do the following:
+  - Prompt the user to input an integer
+  - Create a function that computes and reutrns the sum of the digits in the integer
+  - Output the sum of the digits on the screen
+
+For example, the sum of the digits in the integer 234 is 9 (2 + 3 + 4).
+
+Hint: Use the % operator to extract digits, and the / operator to remove the extracted digits.
+
+Algorithm:
+- Include header files and namespaces
+- Declare function prototypes:
+  - void formatHeader()
+  - void inputInteger(int& integer)
+  - void dissectAndSumDigits(int integer, int& sum)
+  - void printSum(int sum)
+
+- int main()
+   - Declare variables and arrays
+    - int integer
+    - sum
+  - Call formatHeader();
+  - Call inputInteger(integer);
+  - Call dissectDigits(integer digits)
+  - Call sumDigits(digits, sum)
+  - Call printSum(sum)
+
+- void formatHeader()
+  - print name of program nicely formatted
+
+- void inputInteger(int& integer)
+  - Use cin to take value and store in integer
+
+- void dissectAndSumDigits(int integer, int digits[])
+  - Declare local variables
+    - int leftOver
+    - int i = 0
+  - Set leftover to the value of integer
+  - Use while structure to test whether leftover > 0
+   - leftover = integer % 10
+   - sum += leftover
+   - integer /= integer
+- void printSum(int sum)
+  - print sum of digits
+  

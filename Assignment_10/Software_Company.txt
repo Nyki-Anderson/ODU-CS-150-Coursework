@@ -1,0 +1,81 @@
+Objective: 
+
+You must use a class with public and private members to receive credit for this assignment.
+
+Design an algorithm and write a C++ program for a software company. Your program will do the following:
+   - Create a class EmployeeType that holds data about an employee in the software company.
+   - The class has the following public members
+      - First Name
+      - Last Name
+      - Department
+      - Job Title]
+      - Email Address
+  - The class has the following private members 
+      - Date of Birth
+      - Employee ID
+  - Read the data about the employees from the input file
+  - Output the data as shown in the sample run
+
+Algorithm:
+
+Include all header files and namespaces
+ - iostream
+ - fstream
+ - string
+
+Define EmployeeClass
+  public
+    - string firstName
+    - string lastName
+    - string department
+    - string title
+    - string email
+    - void set_DOB(string dob)
+    - string get_DOB()
+    - void set_ID(int ID)
+    - int get_ID()
+    - void read_data(ifstream inData, int* &employeeArrayPtr)
+    - void print_data(const int* &employeeArrayPtr)
+  private
+    - DateType DOB
+    - int ID
+
+Declare function prototypes
+  - void print_header()
+
+int main()
+  Declare all variables
+    - int* employeeArrayPtr;
+    - employeeArrayPtr new employees[7]
+    - ifstream inData
+  Call print_header()
+  Call read_data(inData, employeeArrayPtr)
+  Call print_data(employeeArrayPtr)
+
+void print_header()
+  Print nicely formatted header
+
+void EmployeeClass::set_DOB(string& emplyeeDOB)
+  DOB = employeeDOB
+
+string EmployeeClass::get_DOB()
+  return DOB
+
+void EmployeeClass::set_ID(int& employeeID)
+  ID = employeeID
+  
+int EmployeeClass::get_ID()
+  return ID
+
+void EmployeeClass::read_data(ifstream& inData, int* &employeeArrayPtr)
+  While (inData)
+    Use ifstream variable to read data from input-7.txt
+    When storing DOB and ID
+      - Use set functions from EmployeeClass
+    *p++
+
+void print_data(const int* &employeeArrayPtr)
+  for (int i = 0; i < 7; i++)
+    Print data in nicely formatted table
+    When print DOB and ID
+      - Use get functions from EmployeeClass

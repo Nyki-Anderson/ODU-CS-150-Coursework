@@ -1,0 +1,16 @@
+Objective: Design an algorithm and write a C++ program that calculates and outputs the shipping cost as follows:
+  - Shipping costs are $5 inside the U.S. except to Hawaii and Alaska
+  - Shipping costs are $10 for Hawaii and Alaska
+  - International shipping costs are $15
+
+Algorithm:
+- Declare all constants:
+  - COST_IN_CONTINENTAL_US
+  - COST_IN_HAWAII_ALASKA
+  - COST_INTERNATIONAL
+- Declare all variables:
+  - shippingDestination
+- Prompt user to input their destination and store in shippingDestination
+- Use if structure to test which shipping cost bracket the destination belongs to
+- Calculate cost depending on which bracket the destination fits
+- Output shipping cost

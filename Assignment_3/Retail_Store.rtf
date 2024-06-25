@@ -1,0 +1,99 @@
+/*
+Name of student source file: Retail_Store.cpp
+Student Name: Nyki Anderson
+Student UIN: 01179386
+Lab CRN: 28415
+Date: February 5th, 2023
+
+Project Title: Retail Store Inventory
+Project Description: This program takes an input.txt file and outputs the various items of the inventory in a formatted output.txt file along with the total price of all items in the store.
+*/
+
+#include <iostream> // I/O functions
+#include <iomanip> // I/O formatting functions
+#include <fstream> // File I/O functions
+#include <string> // String functions and definitions
+
+using namespace std;
+
+int main()
+{
+  // Declare all variables
+  string itemName;
+  int itemInventory;
+  double itemPrice, retailTotal;
+
+  // Declare and associate input and output stream variables
+  ifstream inFile;
+  ofstream outFile;
+
+  // Open input.txt and output.txt
+  inFile.open("input.txt");
+  outFile.open("output.txt");
+
+  // Print header info to output.txt
+  outFile << " ********************** \n" << "*   Dominion Fashion   *\n" << " ********************** \n\n" << "Item      Inventory Price\n" << "=========================\n"; 
+
+  // Read first line of retail info, separated by a space character and store in corresponding variable
+  inFile >> itemName >> itemInventory >> itemPrice;
+  // Ignore the rest of the line until a newline character is found.
+  inFile.ignore(100,'\n');
+
+  // Add item price to total price
+  retailTotal += itemPrice * itemInventory;
+
+  // Format floating-point variables with precision of 2 decimal points.
+  outFile << fixed << showpoint << setprecision(2);
+
+  // Output formatted retail info to output.txtx
+  outFile << setw(10) << left << itemName << setw(10) << left << itemInventory << setw(5) << right << itemPrice << endl;
+
+  // Read second line of retail info, separated by a space character and store in corresponding variable
+  inFile >> itemName >> itemInventory >> itemPrice;
+  // Ignore the rest of the line until a newline character is found.
+  inFile.ignore(100,'\n');
+
+  // Add item price to total price
+  retailTotal += itemPrice * itemInventory;
+
+  // Output formatted retail info to output.txt
+  outFile << setw(10) << left << itemName << setw(10) << left << itemInventory << setw(5) << right << itemPrice << endl;
+
+  // Read third line of retail info, separated by a space character and store in corresponding variable
+  inFile >> itemName >> itemInventory >> itemPrice;
+  // Ignore the rest of the line until a newline character is found.
+  inFile.ignore(100,'\n');
+
+  // Add item price to total price
+  retailTotal += itemPrice * itemInventory;
+
+  // Output formatted retail info to output.txt
+  outFile << setw(10) << left << itemName << setw(10) << left << itemInventory << setw(5) << right << itemPrice << endl;
+
+  // Read fourth line of retail info, separated by a space character and store in corresponding variable
+  inFile >> itemName >> itemInventory >> itemPrice;
+  // Ignore the rest of the line until a newline character is found.
+  inFile.ignore(100,'\n');
+
+  // Add item price to total price
+  retailTotal += itemPrice * itemInventory;
+
+  // Output formatted retail info to output.txt
+  outFile << setw(10) << left << itemName << setw(10) << left << itemInventory << setw(5) << right << itemPrice << endl;
+
+  // Read fifth line of retail info, separated by a space character and store in corresponding variable
+  inFile >> itemName >> itemInventory >> itemPrice;
+  // Ignore the rest of the line until a newline character is found.
+  inFile.ignore(100,'\n');
+
+  // Add item price to total price
+  retailTotal += itemPrice * itemInventory;
+
+  // Output formatted retail info to output.txt
+  outFile << setw(10) << left << itemName << setw(10) << left << itemInventory << setw(5) << right << itemPrice << endl;
+
+  // Print heading for total price
+  outFile << "\nTotal price of all items = $" << retailTotal;
+
+  return 0;
+}
